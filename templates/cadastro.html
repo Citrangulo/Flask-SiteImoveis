@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="utf-8">
+     <title>Página Inicial</title>
+   </head>
+   <body>
+     <h2>Página de Cadastro</h2>
+     <hr>
+     <form action="{{ url_for('cadastro')}}" method="POST">
+        <table>
+          <tr>
+            <td>Endereço</td>
+            <td><input type="text" name="endereço"></td>
+          </tr>
+          <tr>
+            <td>Tipo do Imóvel</td>
+            <td><input type="text" name="tipo"></td>
+          </tr>
+          <tr>
+            <td>Área do Imóvel</td>
+            <td><input type="text" name="area"></td>
+          </tr>
+        </table><br>
+        <input type="submit" value="Cadastrar">
+     </form>
+     <a href="/index">Voltar</a>
+   </body>
+</html>

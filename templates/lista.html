@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="utf-8">
+     <title>Lista de Imóveis</title>
+   </head>
+   <body>
+     <h2>Lista de Imóveis</h2>
+     <hr>
+     <table border="4">
+        <tr>
+          <td>Endereço</td>
+          <td>Tipo</td>
+          <td>Área</td>
+          <td>Matrícula</td>
+          <td>Excluir</td>
+        </tr>
+        {% for cadastrado in cadastrados %}
+        <tr>
+          <td>{{ cadastrado.ende }}</td>
+          <td>{{ cadastrado.tipo }}</td>
+          <td>{{ cadastrado.area }}</td>
+          <td>{{ cadastrado.i_id }}</td>
+          <td><a href="/excluir/{{ cadastrado.i_id }}"></a></td>
+        </tr>
+        {% endfor %}
+     </table>
+     <a href="/index">Voltar</a>
+   </body>
+</html>
